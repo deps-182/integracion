@@ -6,7 +6,7 @@ import { RouterLinkActive } from '@angular/router';
 
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-home',
   standalone: true,
   imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './home/home.component.html',
@@ -14,5 +14,5 @@ import { RouterLinkActive } from '@angular/router';
 })
 
 export class AppComponent {
-  title = 'chrono';
+  title = 'Chrono';
 }
