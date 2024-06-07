@@ -22,31 +22,31 @@
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
       <a class="navbar-item" routerLink="/" routerLinkActive="active">
-        Home
+        Inicio
       </a>
 
       <a class="navbar-item">
-        Documentation
+        Documentacion
       </a>
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
-          More
+          Mas
         </a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About
+          <a class="navbar-item" routerLink="/prueba" routerLinkActive="active">
+            Admin
           </a>
           <a class="navbar-item is-selected">
-            Jobs
+            Trabajos
           </a>
           <a class="navbar-item">
-            Contact
+            Contacto
           </a>
           <hr class="navbar-divider">
           <a class="navbar-item">
-            Report an issue
+            Reportar un problema
           </a>
         </div>
       </div>
@@ -55,9 +55,9 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <button class="button is-info is-light">Registrarse</button>
-          <button class="button is-success is-light" routerLink="/login" routerLinkActive="active">Iniciar Sesion</button>
-          <button class="button is-warning is-light">Salir</button>
+          <button class="button is-info is-light" routerLink="/sign-up" routerLinkActive="active">Registrarse</button>
+          <button class="button is-success is-light" routerLink="/log-in" routerLinkActive="active">Iniciar Sesion</button>
+          <button class="button is-warning is-light" (click)="logOut()">Salir</button>
         </div>
       </div>
     </div>
