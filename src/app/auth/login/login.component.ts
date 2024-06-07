@@ -5,12 +5,13 @@ import { Credential } from '../../interfaces/credential';
 import { Router, RouterModule } from '@angular/router';
 import { logInForm } from '../../interfaces/log-in-form';
 import { ButtonProvidersComponent } from '../components/button-providers/button-providers.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterModule, ReactiveFormsModule,ButtonProvidersComponent],
+  imports: [RouterModule, ReactiveFormsModule,ButtonProvidersComponent, HttpClientModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })

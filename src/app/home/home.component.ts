@@ -2,12 +2,13 @@ import { Component, inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../service/auth.service';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule, HttpClientModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
