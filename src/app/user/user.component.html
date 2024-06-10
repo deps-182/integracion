@@ -1,1 +1,18 @@
-<p>user works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Origen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of user">
+        <th> {{ user.id }}</th>
+        <th> {{ user.nombre }}</th>
+        <th> {{ user.email }}</th>
+        <th> {{ user.origen }}</th>
+      </tr>
+    </tbody>
+  </table>

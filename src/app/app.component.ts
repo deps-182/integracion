@@ -5,6 +5,7 @@ import { CommonModule} from '@angular/common';
 import { RouterLinkActive } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -15,4 +16,5 @@ import { RouterLinkActive } from '@angular/router';
 
 export class AppComponent {
   title = 'Chrono';
+
 }
