@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
-import { UserComponent } from './user/user.component';
 import { authGuard, publicGuard } from './guards/auth.guard';
 import { LoginComponent } from './auth/login/login.component';
 import { InicioComponent } from './inicio/inicio.component';

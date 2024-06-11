@@ -5,7 +5,7 @@
       <div class="column is-12 is-5-desktop mb-5 mr-auto">
         <h2 class="mb-6 is-size-1 is-size-3-mobile has-text-weight-bold">Bienvenido a Chrono</h2>
         <p class="subtitle has-text-grey mb-6">Encuentra lo último en Relojes de Lujo</p>
-        <div class="buttons"><a class="button is-black" href="#">Revisar Catálogo</a><a class="button" href="#">Crear Cuenta</a></div>
+        <div class="buttons"><a class="button is-black" href="#">Revisar Catálogo</a><a class="button" routerLink="/sign-up">Crear Cuenta</a></div>
       </div>
       <div class="column is-12 is-6-desktop">
         <img class="image is-fullwidth" src="https://www.muycomputer.com/wp-content/uploads/2019/03/Garmin-MARQ-Reloj-inteligente-lujo-e1552556637614.jpg">
@@ -77,16 +77,5 @@
     </div>
   </div>
 </section>
-
-
-
-<footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      <strong>Chrono</strong> por: <a href="https://jgthms.com">Alan Torres</a>. Diseñado y manufacturado por él
-      <a href="http://opensource.org/licenses/mit-license.php">UChile - Excel Master</a>. El sitio Web se reserva los derechos de autor.
-      <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">San Bernardo - 800 800 2000</a>.
-    </p>
-  </div>
-</footer>
-
+<app-footer></app-footer>
+<router-outlet></router-outlet>
