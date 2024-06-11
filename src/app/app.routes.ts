@@ -7,9 +7,8 @@ import { InicioComponent } from './inicio/inicio.component';
 import { SignupComponent } from './auth/signup/signup.component';
 
 export const routes: Routes = [
-    { path: 'inicio', component: InicioComponent, canActivate: [publicGuard] },
     { path: '', component: InicioComponent, canActivate: [publicGuard] },
     { path: 'log-in', component: LoginComponent, canActivate: [publicGuard] },
     { path: 'sign-up', component: SignupComponent, canActivate: [publicGuard]},
-    { path: 'user', component: UserComponent},
+    { path: 'admin', component: AdminComponent,canActivate: [authGuard]},
 ];

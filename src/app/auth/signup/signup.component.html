@@ -1,60 +1,84 @@
-<section class="hero is-primary is-fullheight">
-    <div class="hero-body">
-      <div class="container">
-        <div class="columns is-centered">
-          <div class="column is-5-tablet is-4-desktop is-3-widescreen">
-            <form [formGroup]="form" (ngSubmit)="signUp()" class="box">
-              <div class="field">
-                <label for="" class="label">Nombre</label>
-                <div class="control has-icons-left">
-                  <input formControlName="names" type="text" placeholder="Nombre de usuario" class="input" required>
-                  <span class="icon is-small is-left">
-                    <i class="fa fa-user"></i>
-                  </span>
-                </div>
+<section class="container">
+  <div class="columns is-multiline">
+    <div class="column is-8 is-offset-2 register">
+      <div class="columns">
+        <div class="column left">
+          <h1 class="title is-1">Chrono</h1>
+          <h2 class="subtitle colored is-4">Registro de usuario</h2>
+          <p>Registrate en chronos para obtener todos los beneficios que ofrecemos.</p>
+        </div>
+        <div class="column right has-text-centered">
+          <h1 class="title is-4">Registrate hoy!</h1>
+          <p class="description">Estas a pasos de registrarte</p>
+          <form [formGroup]="form" (ngSubmit)="signUp()">
+            <div class="field">
+              <label for="" class="label">Nombre</label>
+              <div class="control">
+                <input formControlName="names" type="text" class="input is-medium" type="text" placeholder="Nombre">
               </div>
-              <div class="field">
-                <label for="" class="label">Apellido</label>
-                <div class="control has-icons-left">
-                  <input formControlName="lastName" type="text" placeholder="Apellido" class="input" required>
-                  <span class="icon is-small is-left">
-                    <i class="fa fa-user"></i>
-                  </span>
-                </div>
+            </div>
+            <div class="field">
+              <label for="" class="label">Apellido</label>
+              <div class="control">
+                <input formControlName="lastName" class="input is-medium" type="text" placeholder="Apellido">
               </div>
-              <div class="field">
-                <label for="" class="label">Correo</label>
-                <div class="control has-icons-left">
-                  <input formControlName="email" type="email" placeholder="correo@gmail.com" class="input" required>
-                  <span class="icon is-small is-left">
-                    <i class="fa fa-envelope"></i>
-                  </span>
-                </div>
+            </div>
+            <div class="field">
+              <label for="" class="label">Correo</label>
+              <div class="control">
+                <input class="input is-medium" formControlName="email" type="email" placeholder="correo@gmail.com"
+                  required>
               </div>
-              <div class="field">
-                <label for="" class="label">Contraseña</label>
-                <div class="control has-icons-left">
-                  <input formControlName="password" [type]="hide ? 'password' : 'text'" placeholder="*******" class="input" required>
-                  <span class="icon is-small is-left">
-                    <i class="fa fa-lock"></i>
-                  </span>
-                </div>
+            </div>
+            <div class="field">
+              <label for="" class="label">Contraseña</label>
+              <div class="control">
+                <input class="input is-medium" formControlName="password" [type]="hide ? 'password' : 'text'"
+                  placeholder="*******" required>
               </div>
-              <div class="field">
-                <label for="" class="checkbox">
-                  <input (click)="hide = !hide" type="checkbox">
-                  Recuerdame
-                </label>
-              </div>
-              <div class="field">
-                <button class="button is-success" type="submit">
-                  Registrarse
-                </button>
-              </div>
-            </form>
-          </div>
+            </div>
+            <div class="field">
+              <label for="" class="checkbox">
+                <input (click)="hide = !hide" type="checkbox">
+                Ver contraseña
+              </label>
+            </div>
+            <button class="button is-block is-primary is-fullwidth is-medium" type="submit">Registrarse</button>
+            <br />
+            <small><em>Todos tus datos estan seguros</em></small>
+          </form>
         </div>
       </div>
     </div>
-  </section>
-  <router-outlet></router-outlet>
+    <div class="column is-8 is-offset-2">
+      <br>
+      <nav class="level">
+        <div class="level-left">
+          <div class="level-item">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span> &emsp;
+            <span class="icon">
+              <i class="fab fa-facebook"></i>
+            </span> &emsp;
+            <span class="icon">
+              <i class="fab fa-instagram"></i>
+            </span> &emsp;
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span> &emsp;
+            <span class="icon">
+              <i class="fas fa-envelope"></i>
+            </span>
+          </div>
+        </div>
+        <div class="level-right">
+          <small class="level-item" style="color: var(--textLight)">
+            &copy; Chrono Website. Todos los derechos reservados.
+          </small>
+        </div>
+      </nav>
+    </div>
+  </div>
+</section>
+<router-outlet></router-outlet>

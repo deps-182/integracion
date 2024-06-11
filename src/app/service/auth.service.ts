@@ -2,6 +2,7 @@ import { Injectable, inject } from '@angular/core';
 import { Auth, AuthProvider, GithubAuthProvider, GoogleAuthProvider, UserCredential, authState, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, User } from '@angular/fire/auth';
 import { Credential } from '../interfaces/credential';
 import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,14 @@ export class AuthService {
   private auth: Auth = inject(Auth);
   private http: HttpClient = inject(HttpClient);
 
-  readonly authState$ = authState(this.auth);
+   private authStateSubject = new BehaviorSubject<User | null>(null);
+   readonly authState$ = this.authStateSubject.asObservable();
+ 
+   constructor() {
+     authState(this.auth).subscribe(user => {
+       this.authStateSubject.next(user);
+     });
+   }
 
   signUpWithEmailAndPassword(credential: Credential): Promise<UserCredential> {
     return createUserWithEmailAndPassword(this.auth, credential.email, credential.password)
