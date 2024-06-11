@@ -6,6 +6,11 @@ import { Credential } from '../../interfaces/credential';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
+interface ExtendedCredential extends Credential {
+  displayName: string;
+}
+
+
 @Component({
   selector: 'app-signup',
   standalone: true,
@@ -41,9 +46,10 @@ export class SignupComponent {
 
   async signUp(): Promise<void> {
     if (this.form.invalid) return;
-    const credential: Credential = {
+    const credential: ExtendedCredential = {
       email: this.form.value.email || '',
       password: this.form.value.password || '',
+      displayName: `${this.form.value.names} ${this.form.value.lastName}`,
     };
     try{
       const userCredentials = await this.authService.signUpWithEmailAndPassword(credential)
